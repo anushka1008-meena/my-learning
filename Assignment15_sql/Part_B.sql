@@ -11,6 +11,15 @@ sum(txn_amount) as total_amount
 from customer_transactions
 group by txn_type;
 
+/* 
+output :
+txn_type                                           transaction_count total_amount
+-------------------------------------------------- ----------------- ------------
+purchase                                           1617              806537
+withdrawal                                         1580              793003
+deposit                                            2671              1359168
+*/
+
 
 
 
@@ -32,6 +41,14 @@ from (
        where txn_type = 'deposit'
        group by customer_id
      ) as deposits;
+
+/* 
+output :
+avg_deposit_count avg_deposit_amount
+----------------- ------------------
+5                 2718
+*/
+
 
 
 
@@ -68,3 +85,13 @@ where deposit_count > 1  and (purchase_count >= 1  or  withdrawal_count >= 1)
 
 group by month_no
 order by month_no;
+
+/*
+output :
+month_no    customer_count
+----------- --------------
+1           168
+2           181
+3           192
+4           70
+*/
