@@ -1,0 +1,27 @@
+PS C:\Users\hp\Desktop\Internship\Assignment16> docker run --rm -v "${pwd}:/app" emp-app
+                                                                                
+1: Employees sorted by salary
++---+------+----------+-------+
+| id|  name|department| salary|
++---+------+----------+-------+
+|  4| Priya|   Finance|70000.0|
+|  3|  Neha|        IT|65000.0|
+|  7| Rohit|   Finance|60000.0|
+|  1|  Amit|        IT|55000.0|
+|  5| Karan|        IT|50000.0|
+|  6|Simran|        HR|45000.0|
+|  2| Rahul|        HR|40000.0|
++---+------+----------+-------+
+
+
+2: Department wise total
++----------+-----------+
+|department|sum(salary)|
++----------+-----------+
+|        HR|    85000.0|
+|   Finance|   130000.0|
+|        IT|   170000.0|
++----------+-----------+
+
+
+3: Top 3 employees saved in 'top_3_employees_result' folder
